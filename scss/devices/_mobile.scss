@@ -4,6 +4,46 @@
         row-gap: 10vh;
     }
 
+    header {
+        height: 50vh;
+
+        > section {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(50,50,50,.59);
+            align-items: center;
+            row-gap: 4vh;
+            > ul {
+                display: none;
+            }
+
+            > article {
+                align-items: center;
+                color: whitesmoke;
+                row-gap: 2vh;
+            }
+        }
+
+        article > a {
+            color: whitesmoke;
+            background-color: $defaultColor;
+            border-radius: 5px;
+            padding: 3%;
+            width: 50%;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        h2 {
+            border-bottom: 1px solid whitesmoke;
+        }
+
+    }
+
+    nav > ul {
+        display: none;
+    }
+
     img {
         width: 30%;
     }
