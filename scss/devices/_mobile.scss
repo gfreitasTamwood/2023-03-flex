@@ -142,7 +142,23 @@
     /* TEAM */
 
     /* TEAM - GALLERY */
+    .team-gallery {
+        @include flexColumn(3vh);
 
+        > figure {
+            align-items: center;
+        }
+
+        img {
+            width: 40vh;
+            height: 40vh;
+            border-radius: 50%;
+        }
+
+        figcaption {
+            display: none;
+        }
+    }
     /* TEAM - SKILLS */
     .skills {
         @include flexColumn(5vh);
@@ -252,6 +268,24 @@
     textarea {
         height: 30vh;
         resize: none;
+    }
+
+    footer {
+        padding-top: 10vh;
+        @include flexColumn(2vh);
+        align-items: center;
+
+        p {
+            font-size: 14px;
+        }
+
+        a {
+            background-color: $defaultColor;
+            padding: 3%;
+            color: whitesmoke;
+            text-align: center;
+            width: 50%;
+        }
     }
 
     [type="submit"] {
