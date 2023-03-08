@@ -20,15 +20,17 @@
                 text-align: center;
             }
         }
-    }
-
-    /* SERVICES */
-    .services {
-        
 
         > section {
             @include flexColumn(3vh);
             align-items: center;
+        }
+    }
+
+    /* SERVICES */
+    .services {
+
+        > section {
 
             > aside:nth-child(1) {
                 background-color: $seaGreen;
@@ -70,6 +72,22 @@
 
         i {
             display: none;
+        }
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        > section {
+            width: 95%;
+        }
+
+        figcaption {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 45vh;
         }
     }
 }
