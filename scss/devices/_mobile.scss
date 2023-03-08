@@ -1,0 +1,12 @@
+@media (min-width: 200px) {
+    img {
+        width: 30%;
+    }
+
+    /* SERVICES */
+    .services {
+        > section {
+            row-gap: 3vh;
+        }
+    }
+}
