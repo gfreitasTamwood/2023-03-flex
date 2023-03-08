@@ -38,5 +38,6 @@ header > section > article,
 main,
 main > section,
 main > section > article {
-    @include flexboxCenter(flex-start,center);
+    display: flex;
+    flex-direction: column;
 }
