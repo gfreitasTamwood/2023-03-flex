@@ -66,6 +66,79 @@
         }
     }
 
+    /* PORTFOLIO */
+    .portfolio {
+
+        > section {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 5vw;
+        }
+
+        figure {
+            width: 40%;
+            height: 25vh;
+            display: flex;
+            position: relative;
+            overflow-y: hidden;
+            justify-content: flex-end;
+            &:hover figcaption {
+                height: 100%;
+                
+            }
+        }
+
+       
+
+        h5 {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        figcaption {
+            text-align: center;
+            overflow-y: hidden;
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 0%;
+            background-color: rgba($color: $defaultColor, $alpha: 0.850);
+            row-gap: 2vh;
+            @include flexCenter;
+            color: white;
+            z-index: 2;
+            transition: .6s;
+            p {
+                width: 80%;
+                color: whitesmoke;
+            }
+
+            a {
+                width: 3vh;
+                height: 3vh;
+                background-color: whitesmoke;
+                display: flex;
+                @include flexCenter;
+                color: $defaultColor;
+                border-radius: 50%;
+                transition: .6s;
+
+                &:hover {
+                    background-color: $defaultColor;
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+
     /* TEAM - GALLERY */
     .team-gallery {
         flex-direction: row;
@@ -76,7 +149,6 @@
 
         figcaption {
             display: flex;
-            visibility: hidden;
         }
 
         figure {
@@ -90,14 +162,15 @@
 
             &:hover figcaption {
                 visibility: visible;
-                height: 100%;
+                height: 120%;
             }
         }        
 
         figcaption {
+            bottom: -15%;
             z-index: 2;
             position: absolute;
-            width: 100%;            
+            width: 100%;      
             height: 0%;
             transition: .6s;
             background-color: rgba($color: $defaultColor, $alpha: 0.8);
