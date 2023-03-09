@@ -52,6 +52,44 @@
         }
     }
 
+    nav {
+        width: 80%;
+
+        [class*="fan"] {
+            padding: 4%;
+        }
+    }
+
+    details {
+        > ul {
+            padding-top: 1vh;
+            background-color: transparent;
+            row-gap: 0vh;
+        }
+
+        li {
+            background-color: white;
+        }
+
+        a:hover {
+            color: $defaultColor;
+        }
+    }
+
+    summary {
+        padding: 1vh;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        a {
+            width: 20%;
+            padding: 1vh;
+        }
+    }
+
     /* SERVICES */
     .services {
         > section {
