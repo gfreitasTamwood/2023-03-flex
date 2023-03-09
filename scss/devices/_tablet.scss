@@ -52,6 +52,82 @@
         }
     }
 
+    /* TEAM - GALLERY */
+    .team-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: unset;
+        justify-content: center;
+        column-gap: 4vw;
+
+        figcaption {
+            display: flex;
+            visibility: hidden;
+        }
+
+        figure {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            width: 30vh;
+            height: 30vh;
+            overflow: hidden;
+            border-radius: 50%;
+
+            &:hover figcaption {
+                visibility: visible;
+                height: 100%;
+            }
+        }        
+
+        figcaption {
+            z-index: 2;
+            position: absolute;
+            width: 100%;            
+            height: 0%;
+            transition: .6s;
+            background-color: rgba($color: $defaultColor, $alpha: 0.8);
+            row-gap: 1vh;
+            @include flexCenter;
+            color: whitesmoke;
+            > h4 {
+                border-bottom: 1px solid whitesmoke;
+                padding-bottom: 1vh;
+            }
+
+            ul {
+                display: flex;
+                list-style-type: none;
+                column-gap: 2vw;
+            }
+
+            a {
+                display: flex;
+                background-color: white;
+                @include flexCenter;
+                color: $defaultColor;
+                font-size: 18px;
+                border-radius: 50%;
+                width: 3vh;
+                height: 3vh;
+                transition: .6s;
+
+                &:hover {
+                    background-color: $defaultColor;
+                    color: whitesmoke;
+                }
+            }
+
+        }
+
+        img {
+            z-index: 1;
+            width: 100%;            
+            height: 100%;
+            position: absolute;
+        }
+    }
+
     /* CONTACT */
     .contact {
         > section {
