@@ -52,6 +52,20 @@
         }
     }
 
+    /* SERVICES */
+    .services {
+        > section {
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 5vw;
+        }
+        aside {
+            width: 40%;
+            min-height: 30vh;
+        }
+    }
+
     /* TEAM - GALLERY */
     .team-gallery {
         flex-direction: row;
