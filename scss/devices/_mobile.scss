@@ -1,0 +1,362 @@
+@media (min-width: 200px) {
+    main {
+        padding-top: 5vh;
+        row-gap: 10vh;
+    }
+
+    header {
+        height: 50vh;
+        overflow-y: hidden;
+        > section {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(50,50,50,.59);
+            align-items: center;
+            row-gap: 4vh;
+            > ul {
+                display: none;
+            }
+
+            > article {
+                align-items: center;
+                color: whitesmoke;
+                row-gap: 2vh;
+            }
+        }
+
+        article > a {
+            color: whitesmoke;
+            background-color: $defaultColor;
+            border-radius: 5px;
+            padding: 3%;
+            width: 50%;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        h2 {
+            border-bottom: 1px solid whitesmoke;
+        }
+
+    }
+
+    /* NAVIGATION MENU */
+    nav {
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 10vh;
+        width: 90%;
+
+        h3 {
+            color: $defaultColor;
+            font-size: 30px;
+        }
+
+        > article {
+            display: flex;
+            align-items: center;
+            column-gap: 10vw;
+        }
+        
+        > ul {
+            display: none;
+        }
+
+        i {
+            padding: 10%;
+            font-size: 50px;
+            color: white;
+            background-color: $defaultColor;
+        }
+    }
+
+    details {
+        width: 90%;
+        text-align: right;
+        position: absolute;
+        > ul {
+            position: absolute;
+            list-style-type: none;
+            background-color: white;
+            width: 100%;
+            row-gap: 1vh;
+        }
+
+        li {
+            display: flex;
+        }
+
+        a {
+            width: 100%;
+            color: dimgray;
+            padding: 2%;
+            text-transform: uppercase;
+        }
+
+    }
+
+    summary {
+        background-color: $defaultColor;
+        color: white;
+        padding: 2vh;
+        font-size: 20px;
+    }
+
+    img {
+        width: 30%;
+    }
+
+    %title {
+        @include flexColumn(2vh);
+        @include flexCenter;
+
+        > p {
+            text-align: center;
+        }
+    }
+
+    %content {
+        @include flexColumn(3vh);
+        align-items: center;
+    }
+
+    .row {
+        align-items: center;
+        row-gap: 5vh;
+
+        > article {
+            @extend %title;
+        }
+
+        > section {
+            @extend %content;
+        }
+    }
+
+    /* SERVICES */
+    .services {
+
+        > section {
+
+            > aside:nth-child(1) {
+                background-color: $seaGreen;
+            }
+
+            > aside:nth-child(2) {
+                background-color: $orange;
+            }
+
+            > aside:nth-child(3) {
+                background-color: $blue;
+            }
+
+            > aside:nth-child(4) {
+                background-color: $green;
+            }
+        }
+
+        aside {
+            color: whitesmoke;
+            min-height: 45vh;
+            width: 90%;
+            @include flexColumn(2vh);
+            @include flexCenter;
+
+            p {
+                color: whitesmoke;
+                width: 80%;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+
+        h4 {
+            border-bottom: 1px solid whitesmoke;
+            padding-bottom: 1vh;
+            font-size: 24px;
+        }
+
+        i {
+            display: none;
+        }
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        > section {
+            width: 95%;
+        }
+
+        figcaption {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 45vh;
+        }
+    }
+
+    /* TEAM - GALLERY */
+    .team-gallery {
+        @include flexColumn(3vh);
+
+        > figure {
+            align-items: center;
+        }
+
+        img {
+            width: 40vh;
+            height: 40vh;
+            border-radius: 50%;
+        }
+
+        figcaption {
+            display: none;
+        }
+    }
+    /* TEAM - SKILLS */
+    .skills {
+        @include flexColumn(5vh);
+        > article {
+            @extend %title;
+            row-gap: 0vh;
+            > p {
+                font-style: italic;
+                font-size: 14px;
+                width: 90%;
+            }
+        }
+
+        aside {
+            width: 90%;
+        }
+
+        aside, 
+        > section {
+            @extend %content;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-style: italic;
+            color: gray;
+            font-weight: 400;
+        }
+
+        ul {
+            @include flexColumn(2vh);
+            width: 90%;
+        }
+
+        li {
+            display: flex;
+            width: 100%;
+            height: 5vh;
+            background-color: gainsboro;
+        }
+
+        li:first-child > h6 {
+            width: 90%;
+        }
+
+        li:nth-child(3) > h6 {
+            width: 70%;
+        }
+
+        h6 {
+            display: flex;
+            align-items: center;
+            width: 80%;
+            height: 100%;
+            background-color: $defaultColor;
+        }
+
+        small {
+            color: whitesmoke;
+            padding-left: 2vh;
+            text-transform: uppercase;
+        }
+    }
+
+    /* CONTACT */
+    .contact {
+
+        > section > article {
+            @include flexColumn(2vh);
+            width: 90%;
+            font-size: 14px;
+        }
+
+        > section > section {
+            width: 90%;
+        }
+
+        ul {
+            @include flexColumn(1vh);
+            list-style-type: none;
+            color: dimgray;
+            a {
+                color: $defaultColor;
+            }
+        }
+
+        li {
+            display: flex;
+            column-gap: 1vh;
+        }
+    }
+
+    form {
+        row-gap: 2vh;
+    }
+
+    input,
+    textarea {
+        border: 1px solid gainsboro;
+    }
+
+    input {
+        height: 5vh;
+    }
+
+    textarea {
+        height: 30vh;
+        resize: none;
+    }
+
+    footer {
+        padding-top: 10vh;
+        @include flexColumn(2vh);
+        align-items: center;
+
+        p {
+            font-size: 14px;
+        }
+
+        a {
+            background-color: $defaultColor;
+            padding: 3%;
+            color: whitesmoke;
+            text-align: center;
+            width: 50%;
+        }
+    }
+
+    [type="submit"] {
+        background-color: $defaultColor;
+        border: 3px solid transparent;
+        color: whitesmoke;
+    }
+
+    ::placeholder {
+        padding: 2vw;
+        color: darkgray;
+    }
+}

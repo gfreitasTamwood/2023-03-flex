@@ -1,0 +1,309 @@
+@media (min-width: $tabletScreen) {
+    /* HEADER */
+    header {
+        > section {
+            > ul {
+                display: flex;
+                list-style-type: none;
+                padding-top: 5%;
+                column-gap: 2vw;
+            }
+
+            > article {
+                height: 100%;
+                justify-content: center;
+            }
+        }
+
+        article > a {
+            border: 2px solid $defaultColor;
+            transition: .6s;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+
+        li [class*="envelope"],
+        li [class*="brands"] {
+            border: 2px solid whitesmoke;
+            border-radius: 50%;
+            display: flex;
+            @include flexCenter;
+            background-color: whitesmoke;
+            color: dimgray;
+            height: 3vh;
+            width: 3vh;
+            transition: .6s;
+
+            &:hover {
+                background-color: transparent;
+                color: whitesmoke;
+            }
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+    }
+
+    nav {
+        width: 80%;
+
+        [class*="fan"] {
+            padding: 4%;
+        }
+    }
+
+    details {
+        > ul {
+            padding-top: 1vh;
+            background-color: transparent;
+            row-gap: 0vh;
+        }
+
+        li {
+            background-color: white;
+        }
+
+        a:hover {
+            color: $defaultColor;
+        }
+    }
+
+    summary {
+        padding: 1vh;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        a {
+            width: 20%;
+            padding: 1vh;
+        }
+    }
+
+    /* SERVICES */
+    .services {
+        > section {
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 5vw;
+        }
+        aside {
+            width: 40%;
+            min-height: 30vh;
+        }
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+
+        > section {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 5vw;
+        }
+
+        figure {
+            width: 40%;
+            height: 25vh;
+            display: flex;
+            position: relative;
+            overflow-y: hidden;
+            justify-content: flex-end;
+            &:hover figcaption {
+                height: 100%;
+                
+            }
+        }
+
+       
+
+        h5 {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        figcaption {
+            text-align: center;
+            overflow-y: hidden;
+            position: absolute;
+            display: flex;
+            width: 100%;
+            height: 0%;
+            background-color: rgba($color: $defaultColor, $alpha: 0.850);
+            row-gap: 2vh;
+            @include flexCenter;
+            color: white;
+            z-index: 2;
+            transition: .6s;
+            p {
+                width: 80%;
+                color: whitesmoke;
+            }
+
+            a {
+                width: 3vh;
+                height: 3vh;
+                background-color: whitesmoke;
+                display: flex;
+                @include flexCenter;
+                color: $defaultColor;
+                border-radius: 50%;
+                transition: .6s;
+
+                &:hover {
+                    background-color: $defaultColor;
+                    color: whitesmoke;
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+
+    /* TEAM - GALLERY */
+    .team-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: unset;
+        justify-content: center;
+        column-gap: 4vw;
+
+        figcaption {
+            display: flex;
+        }
+
+        figure {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            width: 30vh;
+            height: 30vh;
+            overflow: hidden;
+            border-radius: 50%;
+
+            &:hover figcaption {
+                visibility: visible;
+                height: 120%;
+            }
+        }        
+
+        figcaption {
+            bottom: -15%;
+            z-index: 2;
+            position: absolute;
+            width: 100%;      
+            height: 0%;
+            transition: .6s;
+            background-color: rgba($color: $defaultColor, $alpha: 0.8);
+            row-gap: 1vh;
+            @include flexCenter;
+            color: whitesmoke;
+            > h4 {
+                border-bottom: 1px solid whitesmoke;
+                padding-bottom: 1vh;
+            }
+
+            ul {
+                display: flex;
+                list-style-type: none;
+                column-gap: 2vw;
+            }
+
+            a {
+                display: flex;
+                background-color: white;
+                @include flexCenter;
+                color: $defaultColor;
+                font-size: 18px;
+                border-radius: 50%;
+                width: 3vh;
+                height: 3vh;
+                transition: .6s;
+
+                &:hover {
+                    background-color: $defaultColor;
+                    color: whitesmoke;
+                }
+            }
+
+        }
+
+        img {
+            z-index: 1;
+            width: 100%;            
+            height: 100%;
+            position: absolute;
+        }
+    }
+
+    /* SKILLS */
+    .skills {
+        align-items: center;
+        > section {
+            width: 90%;
+            flex-direction: row;
+            align-items: flex-start;
+            column-gap: 3vw;
+        }
+
+        li {
+            height: 3vh;
+        }
+
+        small {
+            font-size: 14px;
+        }
+    }
+
+    /* CONTACT */
+    .contact {
+        > section {
+            width: 90%;
+            flex-direction: row;
+            column-gap: 4vw;
+            align-items: flex-start;
+        }
+        
+        p {
+            font-size: 18px;
+        }
+    }
+
+    input {
+        height: 3vh;
+        padding-left: 1vw;
+    }
+
+    textarea {
+        height: 20vh;
+        padding-left: 1vw;
+    }
+
+    [type="submit"] {
+        border: 3px solid $defaultColor;
+        transition: .6s;
+
+        &:hover {
+            background-color: transparent;
+            color: $defaultColor;
+            cursor: pointer;
+        } 
+    }
+}
