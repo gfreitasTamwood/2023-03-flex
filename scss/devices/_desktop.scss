@@ -1,15 +1,44 @@
 @media (min-width: $desktopScreen) {
 
-    /* CONTACT */
-    .contact {
-        h2 {
-            font-size: 30px;
-            font-weight: 600;
+    .row {
+        > article {
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* TEAM GALLERY */
+    .team-gallery {
+
+        figure:hover figcaption{
+            bottom: 0%;
+            height: 100%;
+        } 
+
+        figcaption {
+            bottom: -20%;
+        }
+    }
+
+    /* SKILLS */
+    .skills {
+        li {
+            height: 5vh;
         }
 
         > article > p {
-            font-size: 18px;
+            width: 100%;
         }
+    }
+
+    /* CONTACT */
+    .contact {
 
         p {
             font-size: 14px;
