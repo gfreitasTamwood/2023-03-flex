@@ -13,6 +13,47 @@
         }
     }
 
+    /* SERVICES */
+    .services {
+        > section {
+            justify-content: center;
+            column-gap: 2vw;
+        }
+
+        aside {
+            position: relative;
+            width: 20vw;
+            > p {
+                opacity: 0;
+                font-size: 16px;
+            }
+
+            > h4 {
+                opacity: 0;
+            }
+
+            i {
+                display: block;
+                position: absolute;
+                opacity: 1;
+                font-size: 40px;
+            }
+        }
+
+        aside:hover {
+            > p,
+            > h4 {
+                opacity: 1;
+                transition: .6s;
+            }
+
+            i {
+                opacity: 0;
+                transition: .6s;
+            }
+        }
+    }
+
     /* TEAM GALLERY */
     .team-gallery {
 
