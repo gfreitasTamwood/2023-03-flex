@@ -54,6 +54,17 @@
         }
     }
 
+    /* PORTFOLIO */
+    .portfolio {
+        > section {
+            column-gap: 2vw;
+        }
+
+        figure {
+            width: 20%;
+        }
+    }
+
     /* TEAM GALLERY */
     .team-gallery {
 
