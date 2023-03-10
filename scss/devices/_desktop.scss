@@ -1,0 +1,194 @@
+@media (min-width: $desktopScreen) {
+
+    .row {
+        > article {
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    header {
+        height: 80vh;
+
+        li [class*="envelope"],
+        li [class*="brands"] {
+            width: 5vh;
+            height: 5vh;
+            font-size: 20px;
+        }
+
+        li {
+            height: 5vh;
+            width: 5vh;
+        }
+
+        > article h2,
+        > article h5 {
+            font-weight: 300;
+        }
+    }
+
+    nav {
+        width: 75%;
+        height: 18vh;
+        padding: 0;
+
+        > article {
+            column-gap: 4vw;
+        }
+
+        > ul {
+            height: 100%;
+            list-style-type: none;
+            width: 55%;
+            display: flex;
+            column-gap: 3vw;
+            align-items: center;
+
+            > li {
+                width: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            a {
+                border-top: 2px solid transparent;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: gray;
+                &:hover {
+                    border-color: $defaultColor;
+                    color: $defaultColor;
+                }
+            }
+        }
+
+        > article {
+            height: 100%;
+
+            > aside {
+                height: 100%;
+                padding: 0;
+            }
+        }
+
+        [class*="fan"] {
+            width: 7vw;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    details {
+        display: none;
+    }
+
+    /* SERVICES */
+    .services {
+        > section {
+            justify-content: center;
+            column-gap: 2vw;
+        }
+
+        aside {
+            position: relative;
+            width: 20vw;
+            > p {
+                opacity: 0;
+                font-size: 16px;
+            }
+
+            > h4 {
+                opacity: 0;
+            }
+
+            i {
+                display: block;
+                position: absolute;
+                opacity: 1;
+                font-size: 40px;
+            }
+        }
+
+        aside:hover {
+            > p,
+            > h4 {
+                opacity: 1;
+                transition: .6s;
+            }
+
+            i {
+                opacity: 0;
+                transition: .6s;
+            }
+        }
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+        > section {
+            column-gap: 2vw;
+        }
+
+        figure {
+            width: 20%;
+        }
+    }
+
+    /* TEAM GALLERY */
+    .team-gallery {
+
+        figure:hover figcaption{
+            bottom: 0%;
+            height: 100%;
+        } 
+
+        figcaption {
+            bottom: -20%;
+        }
+    }
+
+    /* SKILLS */
+    .skills {
+        li {
+            height: 5vh;
+        }
+
+        > article > p {
+            width: 100%;
+        }
+    }
+
+    /* CONTACT */
+    .contact {
+
+        p {
+            font-size: 14px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    input {
+        height: 5vh;
+    }
+
+    [type="submit"] {
+        font-size: 20px;
+    }
+}
