@@ -13,6 +13,89 @@
         }
     }
 
+    header {
+        height: 80vh;
+
+        li [class*="envelope"],
+        li [class*="brands"] {
+            width: 5vh;
+            height: 5vh;
+            font-size: 20px;
+        }
+
+        li {
+            height: 5vh;
+            width: 5vh;
+        }
+
+        > article h2,
+        > article h5 {
+            font-weight: 300;
+        }
+    }
+
+    nav {
+        width: 75%;
+        height: 18vh;
+        padding: 0;
+
+        > article {
+            column-gap: 4vw;
+        }
+
+        > ul {
+            height: 100%;
+            list-style-type: none;
+            width: 55%;
+            display: flex;
+            column-gap: 3vw;
+            align-items: center;
+
+            > li {
+                width: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            a {
+                border-top: 2px solid transparent;
+                display: flex;
+                align-items: center;
+                height: 100%;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: gray;
+                &:hover {
+                    border-color: $defaultColor;
+                    color: $defaultColor;
+                }
+            }
+        }
+
+        > article {
+            height: 100%;
+
+            > aside {
+                height: 100%;
+                padding: 0;
+            }
+        }
+
+        [class*="fan"] {
+            width: 7vw;
+            height: 100%;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    details {
+        display: none;
+    }
+
     /* SERVICES */
     .services {
         > section {
